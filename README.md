@@ -74,3 +74,6 @@ export default defineConfig([
 
 ```
 ## TeamFlow
+
+### Project Search
+TeamFlow supports project search and pagination.
