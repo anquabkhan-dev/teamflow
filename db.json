@@ -1,0 +1,12 @@
+{
+    "projects": [
+        {
+            "id": 101,
+            "name": "Project A"
+        },
+        {
+            "id": 102,
+            "name": "Project B"
+        }
+    ]
+}
