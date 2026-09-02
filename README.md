@@ -73,7 +73,11 @@ export default defineConfig([
 ])
 
 ```
+<<<<<<< HEAD
 ## TeamFlow Dashboard Application
+=======
+## TeamFlow Dashboard
+>>>>>>> feature/dashboard
 
 ### Project Search
 TeamFlow supports project search and pagination.
