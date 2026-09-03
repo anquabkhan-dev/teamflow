@@ -77,3 +77,6 @@ export default defineConfig([
 
 ### Project Search
 TeamFlow supports project search and pagination.
+
+### TeamFlow Features
+Projects can be searched, paginated, and created.
