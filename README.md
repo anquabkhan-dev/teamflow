@@ -83,3 +83,9 @@ Projects can be searched, paginated, and created.
 
 ### Main Branch Update
 This change was made on the main branch.
+
+### Interactive Rebase
+Learning interactive rebase in Git.
+
+### Git History Cleanup
+Interactive rebase can clean up commit history.
