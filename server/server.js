@@ -6,7 +6,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-vercel-app.vercel.app",
+  "https://teamflow-ten-theta.vercel.app",
 ];
 
 app.use(
