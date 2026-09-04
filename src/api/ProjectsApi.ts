@@ -1,6 +1,6 @@
 import api from "./axios.ts"
 import { QueryClient } from "@tanstack/react-query";
-import {type projectForm} from "../schemas/projectSchema.ts"
+// import {type projectForm} from "../schemas/projectSchema.ts"
 
 
 
@@ -33,13 +33,13 @@ export type UpdateProjectInput = Partial<CreateProjectInput>
 export type ProjectSummary = Pick<Project, "id"|"name">
 
 
-const projects = [
-  { id: 1, name: "Project A" },
-  { id: 2, name: "Project B" },
-  { id: 3, name: "Project C" },
-  { id: 4, name: "Project D" },
-  { id: 5, name: "Project E" },
-];
+// const projects = [
+//   { id: 1, name: "Project A" },
+//   { id: 2, name: "Project B" },
+//   { id: 3, name: "Project C" },
+//   { id: 4, name: "Project D" },
+//   { id: 5, name: "Project E" },
+// ];
 
 export const getProjects = async (search: String,page: number): Promise<PaginatedResponse<Project>> => {
       console.log("inside getProjects")

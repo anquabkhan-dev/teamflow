@@ -1,12 +1,8 @@
 
 import { createProject } from "../api/ProjectsApi";
-import { setNotification } from "../store/uiSlice";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useAppDispatch } from "../store/hooks";
+import { useMutation } from "@tanstack/react-query";
 
 const useCreateProjects = () => {
-    const queryClient = useQueryClient();
-    const dispatch = useAppDispatch()
 
     const mutation = useMutation({
         mutationFn: createProject,

@@ -16,12 +16,12 @@ export type Permission = "VIEW_PROJECT"|"CREATE_PROJECT"|"EDIT_PROJECT"|"DELETE_
 
 export type PersmissionConfig = Record<Permission, boolean>
 
-const permissions : PersmissionConfig = {
-    "VIEW_PROJECT": true,
-    "CREATE_PROJECT": true,
-    "EDIT_PROJECT": false,
-    "DELETE_PROJECT": true
-}
+// const permissions : PersmissionConfig = {
+//     "VIEW_PROJECT": true,
+//     "CREATE_PROJECT": true,
+//     "EDIT_PROJECT": false,
+//     "DELETE_PROJECT": true
+// }
 
 export const hasPermission = (role: Role, permission: string) => {
     const allowedPermissions = rolePermissions[role];

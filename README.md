@@ -92,3 +92,6 @@ Interactive rebase can clean up commit history.
 
 ## Git Cherrypick practice
 This is to practice cherry pick
+
+### Stash Practice
+This work is not finished yet.

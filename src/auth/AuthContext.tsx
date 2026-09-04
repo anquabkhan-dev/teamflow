@@ -1,5 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { hasPermission } from "./Permissions";
+import { createContext, useContext, useState } from "react";
 import api from "../api/axios";
 
 type User = {

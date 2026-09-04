@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { hasPermission, type Role } from "../../auth/Permissions";
 import { useAuth } from "../../auth/AuthContext";
-import { getProjects } from "../../api/ProjectsApi";
-import { useQuery, useMutation, useQueryClient, keepPreviousData } from "@tanstack/react-query";
-import { createProject } from "../../api/ProjectsApi";
+import {  useQueryClient } from "@tanstack/react-query";
 import { type projectForm, projectSchema } from "../../schemas/projectSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

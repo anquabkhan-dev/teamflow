@@ -1,5 +1,3 @@
-import { useSelector, useDispatch } from "react-redux";
-import  { type RootState, type AppDispatch  } from "../../store/store"
 import { toggleSidebar, setNotification } from "../../store/uiSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { selectNotification, selectSideBarOpen } from "../../store/selectors";

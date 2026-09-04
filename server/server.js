@@ -4,8 +4,54 @@ import { authenticate, authorize } from "./auth.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
 app.use(express.json());
+
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+
+  const users = {
+    "admin@test.com": {
+      id: "1",
+      name: "Anquab",
+      role: "admin",
+      accessToken: "mock-expired-token",
+    },
+    "manager@test.com": {
+      id: "2",
+      name: "Manager User",
+      role: "manager",
+      accessToken: "mock-manager-token",
+    },
+    "developer@test.com": {
+      id: "3",
+      name: "Developer User",
+      role: "developer",
+      accessToken: "mock-developer-token",
+    },
+  };
+
+  const user = users[email];
+
+  if (!user || password !== "123456") {
+    return res.status(401).json({
+      message: "Invalid email or password",
+    });
+  }
+
+  return res.json({
+    accessToken: user.accessToken,
+    refreshToken: "mock-refresh-token",
+    user: {
+      id: user.id,
+      name: user.name,
+      role: user.role,
+    },
+  });
+});
 
 app.get("/", (req, res) => {
   res.json({ message: "Backend is running" });
@@ -74,48 +120,7 @@ app.listen(3000, () => {
 });
 
 
-app.post("/login", (req, res) => {
-  const { email, password } = req.body;
 
-  const users = {
-    "admin@test.com": {
-      id: "1",
-      name: "Anquab",
-      role: "admin",
-      accessToken: "mock-expired-token",
-    },
-    "manager@test.com": {
-      id: "2",
-      name: "Manager User",
-      role: "manager",
-      accessToken: "mock-manager-token",
-    },
-    "developer@test.com": {
-      id: "3",
-      name: "Developer User",
-      role: "developer",
-      accessToken: "mock-developer-token",
-    },
-  };
-
-  const user = users[email];
-
-  if (!user || password !== "123456") {
-    return res.status(401).json({
-      message: "Invalid email or password",
-    });
-  }
-
-  return res.json({
-    accessToken: user.accessToken,
-    refreshToken: "mock-refresh-token",
-    user: {
-      id: user.id,
-      name: user.name,
-      role: user.role,
-    },
-  });
-});
 
 app.post(
   "/projects",

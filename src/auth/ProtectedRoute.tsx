@@ -1,5 +1,5 @@
 import { useAuth } from "./AuthContext"
-import { Navigate, Outlet, type RouteProps } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 import UnautharizedPage from "./UnauthorizedPage"
 
 type RoutesProps = {
